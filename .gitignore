@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+./like-button/node_modules
+./like-button/.pnp
+./like-button/.pnp.js
+
+# testing
+./like-button/coverage
+
+# production
+./like-button/build
+
+# misc
+./like-button/.DS_Store
+./like-button/.env.local
+./like-button/.env.development.local
+./like-button/.env.test.local
+./like-button/.env.production.local
+
+./like-button/npm-debug.log*
+./like-button/yarn-debug.log*
+./like-button/yarn-error.log*
