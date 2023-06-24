@@ -1,25 +1,29 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.css'; // スタイルを読み込む
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <LikeButton />
       </header>
     </div>
+  );
+}
+
+function LikeButton() {
+  // useStateで関数コンポーネントに状態を持たせる
+  // useStateの戻り値をcountとsetCountの2つの変数に代入
+  // countには999、setCountにはcountの値を変更する関数が代入される
+  const [count, setCount] = useState(999);
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+  return (
+    <span className="likeButton" onClick={handleClick}>
+      ♥ {count}
+    </span>
   );
 }
 
